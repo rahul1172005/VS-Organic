@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100;200;300;400;500;600&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Tamil:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --font-geist: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-inter: 'Inter', 'Noto Sans Tamil', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Editorial Pure White Atelier Palette - Vice Versa Theme */
+  --bg-main: #FFFFFF;
+  --bg-surface-1: #F8F8F6;
+  --bg-surface-2: #F0F0EB;
+  --bg-surface-3: #E6E6DE;
+  --bg-surface-glass: rgba(255, 255, 255, 0.96);
+  --bg-surface-hover: #ECECE6;
+
+  /* Warm Cold-Pressed Golden Seed Accent - High Legibility on White */
+  --accent-gold: #9E6F1B;
+  --accent-gold-light: #B88528;
+  --accent-gold-dim: #7A5310;
+  --accent-gold-tint: rgba(158, 111, 27, 0.08);
+  --accent-gold-tint-hover: rgba(158, 111, 27, 0.14);
+
+  /* Inverse Text Hierarchy - Deep Charcoals & Crisp Neutrals */
+  --text-main: #141612;
+  --text-muted: #555750;
+  --text-dim: #7E8079;
+
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.04);
+  --shadow-elevated: 0 12px 36px rgba(0, 0, 0, 0.07);
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 9999px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  border-style: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #FFFFFF;
+  color: var(--text-main);
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #FFFFFF;
+  color: var(--text-main);
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  line-height: 1.6;
+}
+
+main {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Primary Font - Geist Thin Aesthetic */
+.font-geist-thin {
+  font-family: var(--font-geist);
+  font-weight: 200;
+  letter-spacing: -0.03em;
+}
+
+.font-geist-light {
+  font-family: var(--font-geist);
+  font-weight: 300;
+  letter-spacing: -0.025em;
+}
+
+.font-geist-regular {
+  font-family: var(--font-geist);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+/* Secondary Font - Inter & Tamil Typography */
+.font-inter {
+  font-family: var(--font-inter);
+}
+
+/* Layout Utilities without any divider lines */
+.site-container {
+  max-width: 1240px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 28px;
+  padding-right: 28px;
+  box-sizing: border-box;
+}
+
+.section-spacing {
+  padding-top: 88px;
+  padding-bottom: 88px;
+  background-color: #FFFFFF;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Uniform Monochrome Tag - No Multi-color Tags */
+.monochrome-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 13px;
+  border-radius: var(--radius-pill);
+  background-color: var(--accent-gold-tint);
+  color: var(--accent-gold);
+  font-family: var(--font-inter);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Unified Button Aesthetics */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--accent-gold);
+  color: #FFFFFF;
+  font-family: var(--font-inter);
+  font-weight: 600;
+  font-size: 13.5px;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-gold-light);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(158, 111, 27, 0.22);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--bg-surface-1);
+  color: var(--text-main);
+  font-family: var(--font-inter);
+  font-weight: 500;
+  font-size: 13.5px;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-surface-hover);
+  color: #000000;
+  transform: translateY(-1px);
+}
+
+/* Clean Tonal Surface Cards - Absolutely zero border lines or divider lines */
+.surface-card {
+  background-color: var(--bg-surface-1);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-subtle);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.surface-card:hover {
+  background-color: var(--bg-surface-2);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-elevated);
+}
+
+/* Form Controls */
+.clean-input, .clean-select {
+  width: 100%;
+  background-color: var(--bg-surface-2);
+  color: var(--text-main);
+  font-family: var(--font-inter);
+  font-size: 14px;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  outline: none;
+  transition: background-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.clean-input:focus, .clean-select:focus {
+  background-color: var(--bg-surface-3);
+}
+
+.clean-input::placeholder {
+  color: var(--text-dim);
+}
+
+/* Language Switcher Pill */
+.lang-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  background-color: var(--bg-surface-1);
+  color: var(--text-main);
+  font-family: var(--font-inter);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lang-toggle-btn:hover {
+  background-color: var(--bg-surface-2);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-surface-3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-gold-dim);
+}
+
+/* Mobile Responsive System - Strict Zero Horizontal Scroll */
+@media (max-width: 768px) {
+  .site-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .section-spacing {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+  .surface-card {
+    padding: 20px 16px;
+  }
+  .clean-input, .clean-select {
+    font-size: 16px; /* Prevents auto zoom on mobile Safari */
+    padding: 12px 14px;
+  }
+  .btn-primary, .btn-secondary {
+    padding: 11px 18px;
+    font-size: 13px;
+  }
+}
